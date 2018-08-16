@@ -70,6 +70,10 @@ public class ArrayObjectAdapter extends ObjectAdapter {
         return mItems.get(index);
     }
 
+    public List getmItems() {
+        return mItems;
+    }
+
     /**
      * Returns the index for the first occurrence of item in the adapter, or -1 if
      * not found.

@@ -313,7 +313,6 @@ public class ItemBridgeAdapter extends RecyclerView.Adapter implements FacetProv
      */
     protected void onBind(ViewHolder viewHolder) {
     }
-
     /**
      * Called when ViewHolder has been unbound from data.
      */
@@ -386,6 +385,7 @@ public class ItemBridgeAdapter extends RecyclerView.Adapter implements FacetProv
         onBind(viewHolder);
         if (mAdapterListener != null) {
             mAdapterListener.onBind(viewHolder);
+
         }
     }
 

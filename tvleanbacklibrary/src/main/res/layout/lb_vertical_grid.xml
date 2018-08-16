@@ -20,7 +20,7 @@
     xmlns:lb="http://schemas.android.com/apk/res-auto"
     android:id="@+id/browse_grid"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:clipToPadding="false"
     lb:columnWidth="wrap_content"
