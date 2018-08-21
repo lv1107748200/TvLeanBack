@@ -15,6 +15,7 @@ public class MainPresenterSelector extends PresenterSelector {
     private  ListRowPresenter listRowPresenter ;//普通
     private  MoreZeroListRowPresenter moreZeroListRowPresenter;
     private MoreOneRowPresenter moreOneRowPresenter ;
+    private MoreTwoRowPresenter moreTwoRowPresenter;
 
     public MainPresenterSelector() {
         listRowPresenter = new ListRowPresenter();
@@ -26,6 +27,9 @@ public class MainPresenterSelector extends PresenterSelector {
 
         moreOneRowPresenter = new MoreOneRowPresenter();
         moreOneRowPresenter.setHeaderPresenter(new HeadRowPresenter());
+
+        moreTwoRowPresenter = new MoreTwoRowPresenter();
+        moreTwoRowPresenter.setHeaderPresenter(new HeadRowPresenter());
     }
 
     @Override
@@ -37,6 +41,8 @@ public class MainPresenterSelector extends PresenterSelector {
             return moreZeroListRowPresenter;
         }else if(listRow.getContentDescription().toString().equals("more1")) {
             return moreOneRowPresenter;
+        }else if(listRow.getContentDescription().toString().equals("more2")){
+            return moreTwoRowPresenter;
         }
 
         return listRowPresenter;

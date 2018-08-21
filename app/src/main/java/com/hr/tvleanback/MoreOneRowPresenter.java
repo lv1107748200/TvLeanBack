@@ -4,10 +4,12 @@ package com.hr.tvleanback;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hr.tvleanbacklibrary.widget.ArrayObjectAdapter;
 import com.hr.tvleanbacklibrary.widget.FocusHighlight;
 import com.hr.tvleanbacklibrary.widget.FocusHighlightHandler;
 import com.hr.tvleanbacklibrary.widget.FocusHighlightHelper;
@@ -32,8 +34,10 @@ public class MoreOneRowPresenter extends RowPresenter {
                 R.layout.item_more_one,null,false
         );
 
-        view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT
-                ,400));
+        int w = DisplayUtils.getScreenWidth(parent.getContext())  - 80;
+
+        view.setLayoutParams(new ViewGroup.LayoutParams(w
+                ,460));
 
         return new ViewHolder(view);
     }
@@ -44,16 +48,18 @@ public class MoreOneRowPresenter extends RowPresenter {
 
         ListRow listRow = (ListRow) item;
 
-        RecyclerView recyclerView = vh.view.findViewById(R.id.recycle);
+        final RecyclerView recyclerView = vh.view.findViewById(R.id.recycle);
 
         GridLayoutManager linearLayoutManager = new GridLayoutManager(recyclerView.getContext()
                 ,4,VERTICAL,false);
+
+
 
         linearLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
 
-                if(position == 1  || position == 0){
+                if(position == 0 || position == 1){
                     return 2;
                 }
                 return 1;
@@ -66,15 +72,32 @@ public class MoreOneRowPresenter extends RowPresenter {
 
         final ItemBridgeAdapter itemBridgeAdapter = new ItemBridgeAdapter(){
             @Override
-            protected void onBind(ViewHolder viewHolder) {
+            protected void onBind(ViewHolder viewHolder,int point) {
                 super.onBind(viewHolder);
+               // Log.d(" 编号 ","---> " + point);
+                if(point == 0 || point == 1){
+                    viewHolder.itemView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,200));
 
-                    viewHolder.itemView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT
-                            ,80));
+                }else {
+                    viewHolder.itemView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,100));
+                }
 
             }
 
+            @Override
+            protected void onUnbind(ViewHolder viewHolder) {
+                super.onUnbind(viewHolder);
+
+            }
         };
+
+//        ArrayObjectAdapter arrayObjectAdapter = (ArrayObjectAdapter) listRow.getAdapter();
+//
+//
+//        MyRecyclerAdapter myRecyclerAdapter = new MyRecyclerAdapter(recyclerView.getContext(),arrayObjectAdapter.getmItems());
+//
+//
+
         itemBridgeAdapter.setAdapter(listRow.getAdapter());
 
         FocusHighlightHelper.setupBrowseItemFocusHighlight(itemBridgeAdapter,

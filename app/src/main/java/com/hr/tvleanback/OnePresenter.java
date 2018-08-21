@@ -10,16 +10,17 @@ import android.widget.TextView;
 import com.hr.tvleanbacklibrary.widget.Presenter;
 
 /*
- * lv   2018/8/15
+ * lv   2018/8/20
  */
-public class ImagePresenter extends Presenter {
+public class OnePresenter extends Presenter {
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_image,
-                null ,false);
+                parent ,false);
 
-        view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,300));
+        view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,80));
 
         return new ImagePresenterViewHolder(view);
     }
@@ -30,7 +31,7 @@ public class ImagePresenter extends Presenter {
         ImagePresenterViewHolder imagePresenterViewHolder = (ImagePresenterViewHolder) viewHolder;
 
         GlideUtil.setGlideImage(imagePresenterViewHolder.imageView.getContext()
-        , (String) item,imagePresenterViewHolder.imageView,R.drawable.hehe);
+                , (String) item,imagePresenterViewHolder.imageView,R.drawable.hehe);
 
         imagePresenterViewHolder.textView.setText("hehe");
     }
@@ -41,7 +42,7 @@ public class ImagePresenter extends Presenter {
     }
 
 
-   public   class ImagePresenterViewHolder extends ViewHolder{
+    public class ImagePresenterViewHolder extends ViewHolder{
 
         public ImageView imageView;
         public TextView textView;
