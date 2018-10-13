@@ -25,6 +25,8 @@ public class MainActivity extends FragmentActivity {
 
     private ArrayObjectAdapter arrayObjectAdapter;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
