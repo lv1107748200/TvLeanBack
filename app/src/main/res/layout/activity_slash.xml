@@ -25,4 +25,13 @@
         android:text="网格分组"
         android:onClick="Onclick"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_wang_焦点"
+        android:text="焦点样式"
+        android:onClick="Onclick"
+        />
+
+
 </LinearLayout>

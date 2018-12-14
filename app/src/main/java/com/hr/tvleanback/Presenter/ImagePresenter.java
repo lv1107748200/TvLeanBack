@@ -1,4 +1,4 @@
-package com.hr.tvleanback;
+package com.hr.tvleanback.Presenter;
 
 
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hr.tvleanback.GlideUtil;
+import com.hr.tvleanback.R;
 import com.hr.tvleanbacklibrary.widget.Presenter;
 
 /*

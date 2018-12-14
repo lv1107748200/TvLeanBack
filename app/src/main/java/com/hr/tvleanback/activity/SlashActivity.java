@@ -1,4 +1,4 @@
-package com.hr.tvleanback;
+package com.hr.tvleanback.activity;
 
 
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
+
+import com.hr.tvleanback.R;
 
 /*
  * lv   2018/8/15
@@ -30,6 +32,9 @@ public class SlashActivity extends FragmentActivity {
                 break;
             case R.id.btn_wang_fenzu:
                 intent.setClass(this,GroupActivity.class);
+                break;
+            case R.id.btn_wang_焦点:
+                intent.setClass(this,LoopActivity.class);
                 break;
         }
 

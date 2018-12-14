@@ -1,7 +1,10 @@
 package com.hr.tvleanback;
 
 
-import com.hr.tvleanbacklibrary.widget.HeaderItem;
+import com.hr.tvleanback.Presenter.HeadRowPresenter;
+import com.hr.tvleanback.Presenter.MoreOneRowPresenter;
+import com.hr.tvleanback.Presenter.MoreTwoRowPresenter;
+import com.hr.tvleanback.Presenter.MoreZeroListRowPresenter;
 import com.hr.tvleanbacklibrary.widget.ListRow;
 import com.hr.tvleanbacklibrary.widget.ListRowPresenter;
 import com.hr.tvleanbacklibrary.widget.Presenter;
@@ -13,7 +16,7 @@ import com.hr.tvleanbacklibrary.widget.PresenterSelector;
 public class MainPresenterSelector extends PresenterSelector {
 
     private  ListRowPresenter listRowPresenter ;//普通
-    private  MoreZeroListRowPresenter moreZeroListRowPresenter;
+    private MoreZeroListRowPresenter moreZeroListRowPresenter;
     private MoreOneRowPresenter moreOneRowPresenter ;
     private MoreTwoRowPresenter moreTwoRowPresenter;
 

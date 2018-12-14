@@ -23,7 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SlashActivity">
+        <activity android:name=".activity.SlashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,9 +32,10 @@
         </activity>
 
 
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".GroupActivity"/>
-        <activity android:name=".PresenterActivity"/>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.LoopActivity"/>
+        <activity android:name=".activity.GroupActivity"/>
+        <activity android:name=".activity.PresenterActivity"/>
 
     </application>
 

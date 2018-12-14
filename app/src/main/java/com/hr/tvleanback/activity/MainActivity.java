@@ -1,19 +1,18 @@
-package com.hr.tvleanback;
+package com.hr.tvleanback.activity;
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 
+import com.hr.tvleanback.ImgDatasUtils;
+import com.hr.tvleanback.Presenter.ImagePresenter;
+import com.hr.tvleanback.R;
 import com.hr.tvleanbacklibrary.widget.ArrayObjectAdapter;
 import com.hr.tvleanbacklibrary.widget.FocusHighlight;
-import com.hr.tvleanbacklibrary.widget.FocusHighlightHandler;
 import com.hr.tvleanbacklibrary.widget.FocusHighlightHelper;
 import com.hr.tvleanbacklibrary.widget.ItemBridgeAdapter;
-import com.hr.tvleanbacklibrary.widget.OnChildSelectedListener;
 import com.hr.tvleanbacklibrary.widget.OnChildViewHolderSelectedListener;
 import com.hr.tvleanbacklibrary.widget.VerticalGridView;
 
@@ -58,8 +57,8 @@ public class MainActivity extends FragmentActivity {
 
         verticalGridView.setNumColumns(6);
         verticalGridView.setColumnWidth(0);
-        verticalGridView.setHorizontalSpacing(20);
-        verticalGridView.setVerticalSpacing(20);
+        verticalGridView.setHorizontalSpacing(30);
+        verticalGridView.setVerticalSpacing(30);
 
         verticalGridView.setAdapter(itemBridgeAdapter);
 
@@ -90,7 +89,7 @@ public class MainActivity extends FragmentActivity {
 
 
         FocusHighlightHelper.setupBrowseItemFocusHighlight(itemBridgeAdapter,
-                FocusHighlight.ZOOM_FACTOR_XSMALL, false);
+                FocusHighlight.ZOOM_FACTOR_XSMALL, true);
 
         init();
     }

@@ -1,14 +1,16 @@
-package com.hr.tvleanback;
+package com.hr.tvleanback.activity;
 
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.hr.tvleanback.ImgDatasUtils;
+import com.hr.tvleanback.Presenter.ImagePresenter;
+import com.hr.tvleanback.R;
 import com.hr.tvleanbacklibrary.widget.ArrayObjectAdapter;
 import com.hr.tvleanbacklibrary.widget.VerticalGridPresenter;
 

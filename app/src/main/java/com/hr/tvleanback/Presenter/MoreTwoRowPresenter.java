@@ -1,4 +1,4 @@
-package com.hr.tvleanback;
+package com.hr.tvleanback.Presenter;
 
 
 import android.support.v7.widget.GridLayoutManager;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hr.tvleanback.DisplayUtils;
+import com.hr.tvleanback.R;
 import com.hr.tvleanbacklibrary.widget.FocusHighlight;
 import com.hr.tvleanbacklibrary.widget.FocusHighlightHelper;
 import com.hr.tvleanbacklibrary.widget.ItemBridgeAdapter;
